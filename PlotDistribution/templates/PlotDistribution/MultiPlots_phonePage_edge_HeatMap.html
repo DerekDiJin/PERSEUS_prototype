@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>D3: Scatterplot</title>
+	    <script type="text/javascript" src="/static/js/d3.js"></script>
+		<link rel="stylesheet" href="/static/css/MultiPlots.css" media="screen" type="text/css" />
+		<link rel="stylesheet" href="/static/css/bootstrap.min.css"  type="text/css"/>
+		<script src="http://d3js.org/queue.v1.min.js" type="text/javascript"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+		<!--<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">-->
+	</head>
+	<body>
+		<header>
+			<div id="project-header-container">
+				<div id="project-header"><h1> Perseus: An Interactive Large-Scale Graph Mining and Visualization Tool </h1></div>
+			</div>
+			<ul class="nav nav-pills red">
+				<li role="dataset_selection" class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dataset Selection <span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="MultiPlots_soc_Slashdot0811">soc_Slashdot0811</a></li>
+				      	<li><a href="MultiPlots_soc_Slashdot0811_HeatMap">soc_Slashdot0811_HeatMap</a></li>
+				      	<li><a href="MultiPlots_wiki_Vote">wiki_Vote</a></li>
+				      	<li><a href="MultiPlots_tmp2_ID_processed">retweetWeek2</a></li>
+				      	<li><a href="MultiPlots_tmp2_ID_processed_HeatMap">retweetWeek2_HeatMap</a></li>
+				    </ul>
+				    </li>
+				<li role="anomaly_detection" class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ind. Anomaly Detection <span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<div id="showAnomaly0"></div>
+		      			<div id="showAnomaly8"></div>
+		      			<div id="showAnomaly16"></div>
+		      			<div id="showAnomaly32"></div>
+					</ul>
+				</li>
+				<!-- <li role="comb_anomaly_detection" class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Comb. Anomaly Detection <span class="caret"></span>
+					</a>
+		    		<ul class="dropdown-menu" role="menu">
+				      	<div id="showAnomalyOverall0"></div>
+				      	<div id="showAnomalyOverall8"></div>
+				      	<div id="showAnomalyOverall16"></div>
+				      	<div id="showAnomalyOverall32"></div>
+		    		</ul>
+				</li> -->
+			</ul>
+		</header>
+
+
+		
+		<div class="tableContainer">
+			<div class="row">
+				<div class="plot" id="degreeCount">
+				</div>
+				<div class="plot" id="degreePagerank">
+				</div>
+				<div class="plot" id="pageRankCount">
+				</div>
+			</div>
+			<div class="row">
+<!-- 				<div class="plot" id="degreeRadius">
+				</div> -->
+				<div class="plot" id="ev1ev2">
+				</div>
+				<div class="plot" id="ev2ev3">
+				</div>
+				<div class="plot" id="ev3ev4">
+				</div>
+			</div>
+		</div>
+
+		<div class="infoContainer">
+			<div id="console"> <!--??-->
+				<!-- <div class="panel panel-primary"> -->
+					<div id="console_heading">
+						Information Console
+					</div>
+					<div class="panel-body" id="consoleContent">
+						<table id='consoleTable'></table>
+					</div>
+				<!-- </div>			 -->
+			</div>
+			<div id="egonet_svg"></div>
+			<div class="panel-body" id="adj">
+			<svg id="vizcontainer_svg" />
+			</div>
+		</div>
+
+		<!--<script src="/static/js/MultiPlots.js"></script>-->
+		<script src="/static/js/MultiPlots_phonePage_edge_HeatMap.js"></script> 
+	</body>
+</html>
